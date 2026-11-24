@@ -1,0 +1,12 @@
+HSR / FlashDB Edge Time-Series Database (flashdb-edge-tsdb)
+Copyright (c) 2026 flashdb-edge-tsdb contributors
+
+This product includes software derived from:
+  armink/FlashDB (https://github.com/armink/FlashDB)
+  Copyright (c) 2020-2023, Armink
+  Upstream commit: 6c722f169f27f99f96670ee00c27b2f59b1505e2
+  Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+External blind benchmark datasets (kept strictly outside repository; referenced for offline evaluation):
+  - numenta/NAB (MIT License): https://github.com/numenta/NAB
+  - xioTechnologies/Fusion (MIT License): https://github.com/xioTechnologies/Fusion

@@ -1,0 +1,358 @@
+{
+  "status": "verified",
+  "generated_at": "2026-11-24T07:18:03.703267+00:00",
+  "upstream_repo": "armink/FlashDB",
+  "upstream_commit": "6c722f169f27f99f96670ee00c27b2f59b1505e2",
+  "upstream_repro": {
+    "issue_16_rollback": {
+      "upstream_ok": 10,
+      "upstream_dropped": 5,
+      "edge_ok": 15,
+      "edge_queried": 15,
+      "edge_rollbacks": 1,
+      "edge_epoch": 1
+    },
+    "issue_249_capacity": {
+      "upstream_4050_in_4096_append_rc": 0,
+      "upstream_remain_underflowed": 4294967262,
+      "upstream_iter_count": 1,
+      "edge_oversize_rc": -5,
+      "edge_10k_in_16k_open_rc": 0,
+      "edge_10k_in_16k_queried": 64
+    }
+  },
+  "tier1_nab_real_known_cause": {
+    "dataset": "numenta/NAB (MIT, data/realKnownCause, 7 CSVs)",
+    "verdict": "PASSED",
+    "total_rows": 69561,
+    "upstream_written_ok": 69538,
+    "upstream_dropped_natural": 23,
+    "edge_written_ok": 69561,
+    "edge_queried_matched": 69561,
+    "edge_rollbacks_natural": 1,
+    "upstream_flash_bytes_written": 1839123,
+    "edge_flash_bytes_written": 603548,
+    "overall_write_reduction_x": 3.0472,
+    "upstream_erases": 3584,
+    "edge_erases": 0,
+    "edge_bit_exact_all": true,
+    "edge_nor_violations": 0,
+    "rollback_1h_injection_test": {
+      "rows": 22695,
+      "channels": 1,
+      "flash_bytes": 2097152,
+      "upstream": {
+        "written_ok": 22671,
+        "dropped": 24,
+        "queried": 22671,
+        "flash_bytes_written": 596311,
+        "erases": 512,
+        "nor_violations": 0,
+        "write_us": 1164,
+        "query_us": 337
+      },
+      "edge": {
+        "written_ok": 22695,
+        "dropped": 0,
+        "queried_matched": 22695,
+        "mismatch": 0,
+        "flash_bytes_written": 219439,
+        "erases": 0,
+        "nor_violations": 0,
+        "rollbacks": 2,
+        "write_us": 1936,
+        "query_us": 1274,
+        "bit_exact": true,
+        "max_abs_err": 0
+      },
+      "write_reduction_x": 2.7174
+    },
+    "per_file": [
+      {
+        "file": "ambient_temperature_system_failure.csv",
+        "rows": 7267,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 7267,
+          "dropped": 0,
+          "queried": 7267,
+          "flash_bytes_written": 192879,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 370,
+          "query_us": 111
+        },
+        "edge": {
+          "written_ok": 7267,
+          "dropped": 0,
+          "queried_matched": 7267,
+          "mismatch": 0,
+          "flash_bytes_written": 70058,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 622,
+          "query_us": 377,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 2.7531
+      },
+      {
+        "file": "cpu_utilization_asg_misconfiguration.csv",
+        "rows": 18050,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 18050,
+          "dropped": 0,
+          "queried": 18050,
+          "flash_bytes_written": 475301,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 1081,
+          "query_us": 324
+        },
+        "edge": {
+          "written_ok": 18050,
+          "dropped": 0,
+          "queried_matched": 18050,
+          "mismatch": 0,
+          "flash_bytes_written": 183799,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 1386,
+          "query_us": 895,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 2.586
+      },
+      {
+        "file": "ec2_request_latency_system_failure.csv",
+        "rows": 4032,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 4021,
+          "dropped": 11,
+          "queried": 4021,
+          "flash_bytes_written": 107859,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 209,
+          "query_us": 68
+        },
+        "edge": {
+          "written_ok": 4032,
+          "dropped": 0,
+          "queried_matched": 4032,
+          "mismatch": 0,
+          "flash_bytes_written": 39668,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 391,
+          "query_us": 221,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 2.719
+      },
+      {
+        "file": "machine_temperature_system_failure.csv",
+        "rows": 22695,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 22683,
+          "dropped": 12,
+          "queried": 22683,
+          "flash_bytes_written": 596647,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 1152,
+          "query_us": 325
+        },
+        "edge": {
+          "written_ok": 22695,
+          "dropped": 0,
+          "queried_matched": 22695,
+          "mismatch": 0,
+          "flash_bytes_written": 219306,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 1,
+          "write_us": 1846,
+          "query_us": 1014,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 2.7206
+      },
+      {
+        "file": "nyc_taxi.csv",
+        "rows": 10320,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 10320,
+          "dropped": 0,
+          "queried": 10320,
+          "flash_bytes_written": 272833,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 524,
+          "query_us": 157
+        },
+        "edge": {
+          "written_ok": 10320,
+          "dropped": 0,
+          "queried_matched": 10320,
+          "mismatch": 0,
+          "flash_bytes_written": 53921,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 800,
+          "query_us": 385,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 5.0599
+      },
+      {
+        "file": "rogue_agent_key_hold.csv",
+        "rows": 1882,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 1882,
+          "dropped": 0,
+          "queried": 1882,
+          "flash_bytes_written": 51837,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 96,
+          "query_us": 36
+        },
+        "edge": {
+          "written_ok": 1882,
+          "dropped": 0,
+          "queried_matched": 1882,
+          "mismatch": 0,
+          "flash_bytes_written": 14089,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 117,
+          "query_us": 66,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 3.6793
+      },
+      {
+        "file": "rogue_agent_key_updown.csv",
+        "rows": 5315,
+        "channels": 1,
+        "flash_bytes": 2097152,
+        "upstream": {
+          "written_ok": 5315,
+          "dropped": 0,
+          "queried": 5315,
+          "flash_bytes_written": 141767,
+          "erases": 512,
+          "nor_violations": 0,
+          "write_us": 311,
+          "query_us": 106
+        },
+        "edge": {
+          "written_ok": 5315,
+          "dropped": 0,
+          "queried_matched": 5315,
+          "mismatch": 0,
+          "flash_bytes_written": 22707,
+          "erases": 0,
+          "nor_violations": 0,
+          "rollbacks": 0,
+          "write_us": 195,
+          "query_us": 116,
+          "bit_exact": true,
+          "max_abs_err": 0
+        },
+        "write_reduction_x": 6.2433
+      }
+    ]
+  },
+  "tier2_imu_fault_and_wal_sync": {
+    "dataset": "xioTechnologies/Fusion (MIT, Examples/Python/sensor_data.csv, 9-DOF IMU)",
+    "verdict": "PASSED",
+    "fusion_imu_9dof": {
+      "rows": 13514,
+      "channels": 9,
+      "flash_bytes": 2097152,
+      "upstream": {
+        "written_ok": 13514,
+        "dropped": 0,
+        "queried": 13514,
+        "flash_bytes_written": 1226533,
+        "erases": 512,
+        "nor_violations": 0,
+        "write_us": 1323,
+        "query_us": 225
+      },
+      "edge": {
+        "written_ok": 13514,
+        "dropped": 0,
+        "queried_matched": 13514,
+        "mismatch": 0,
+        "flash_bytes_written": 746509,
+        "erases": 0,
+        "nor_violations": 0,
+        "rollbacks": 0,
+        "write_us": 5769,
+        "query_us": 3396,
+        "bit_exact": true,
+        "max_abs_err": 0
+      },
+      "write_reduction_x": 1.643
+    },
+    "power_cut_torn_write_1000_trials": {
+      "trials": 1000,
+      "passed": 1000,
+      "committed_loss_count": 0,
+      "other_failure_count": 0,
+      "power_cuts_triggered": 1000,
+      "torn_tails_fenced": 1000,
+      "nor_bit_violations": 0
+    },
+    "stm32_to_rpi_noisy_wal_sync": {
+      "samples": 2000,
+      "attempts": 2,
+      "injected_corruptions": 2,
+      "duplicate_replays": 1,
+      "accepted_frames": 40,
+      "corrupt_frames": 2,
+      "duplicate_frames": 1,
+      "out_of_order_frames": 14,
+      "src_flushed": 2000,
+      "dst_flushed": 2000,
+      "synced_exact": true
+    }
+  },
+  "tier3_privacy_and_dos_audit": {
+    "dataset": "Synthetic OOD cellular/credential fixtures & DoS bounds",
+    "verdict": "PASSED",
+    "metrics": {
+      "secret_recall": 15,
+      "secret_total": 15,
+      "benign_fp": 0,
+      "benign_total": 15,
+      "dos_checks_passed": 4,
+      "dos_checks_total": 4
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Build artifacts
+build/
+out/
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.pdb
+*.ilk
+*.bin
+*.img
+
+# Python & external benchmark staging
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.fdb_benchmarks/
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

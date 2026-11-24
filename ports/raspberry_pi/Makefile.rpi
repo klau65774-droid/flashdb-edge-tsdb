@@ -1,0 +1,19 @@
+CC      ?= gcc
+CFLAGS  := -std=c11 -O3 -Wall -Wextra -Wshadow -I../../include -I.
+
+CORE_SRCS := \
+	../../src/fdb_edge_crc32c.c \
+	../../src/fdb_edge_hlc.c \
+	../../src/fdb_edge_codec.c \
+	../../src/fdb_edge_tsdb.c \
+	../../src/fdb_edge_wal_sync.c \
+	../../src/fdb_edge_privacy.c \
+	../../src/fdb_edge_flash_sim.c
+
+all: rpi_edge_collector
+
+rpi_edge_collector: $(CORE_SRCS) rpi_edge_collector.c
+	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -f rpi_edge_collector *.bin
